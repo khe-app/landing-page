@@ -215,6 +215,7 @@ body.mobile-nav-open .nav__mobile-nav {
 
 .header__heading-text {
   color: #D5F600;
+  padding-left: 20px;
 }
 
 .highlighted {
@@ -503,4 +504,8 @@ body.mobile-nav-open .nav__mobile-nav {
 .column {
   flex: 33.33%;
 padding: 5px;
+}
+
+.btn-group{
+  margin-left: 15px;
 }
