@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./imgs/khe_icon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white; /* Color del texto */
+        }
+
+        .form-container {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            border: 2px solid #D5F600;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 2px solid #D5F600;
+            border-radius: 5px;
+            box-sizing: border-box;
+            color: white; /* Color del texto */
+            background-color: transparent; /* Fondo transparente */
+        }
+
+        input[type="submit"] {
+            background-color: #D5F600;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #B3CC57;
+        }
+    </style>
+    <title>Khé - Comparte tu día a día</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__container container">
+            <div>
+                <a href="/">
+                    <img style="width: 70px;" loading="lazy" src="./imgs/khe_app_logo.png" alt="Khé App Logo" />
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div style="margin-top: 50px;" class="form-container">
+        <center><h3>Solicitar eliminación de datos</h3></center>
+        <p>Utilice este formulario para solicitar la eliminación de su cuenta y de sus datos asociados de nuestra aplicación.</p>
+        <form action="mailto:developers.kheapp@gmail.com?subject=Solicitud%20de%20eliminación%20de%20cuenta%20y%20datos%20asociados" method="post" enctype="text/plain">
+            <label for="name">Nombre de usuario de Khé:</label><br>
+            <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required><br>
+            <label for="email">Correo electrónico utilizado durante el registro:</label><br>
+            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required><br>
+            <label for="reason">Motivo de la eliminación:</label><br>
+            <textarea id="reason" name="reason" rows="4" placeholder="Explique el motivo de la eliminación" required></textarea><br><br>
+            <input type="submit" value="Enviar solicitud">
+        </form>
+    </div>
+</body>
+
+</html>
