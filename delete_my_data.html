@@ -13,7 +13,8 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            color: white; /* Color del texto */
+            color: white;
+            /* Color del texto */
         }
 
         .form-container {
@@ -22,7 +23,8 @@
             padding: 20px;
             border: 2px solid #D5F600;
             border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fondo semitransparente */
         }
 
         form {
@@ -39,8 +41,10 @@
             border: 2px solid #D5F600;
             border-radius: 5px;
             box-sizing: border-box;
-            color: white; /* Color del texto */
-            background-color: transparent; /* Fondo transparente */
+            color: white;
+            /* Color del texto */
+            background-color: transparent;
+            /* Fondo transparente */
         }
 
         input[type="submit"] {
@@ -70,21 +74,29 @@
             </div>
         </div>
     </nav>
-    
 
-    <div style="margin-top: 50px;" class="form-container">
-        <center><h3>Solicitar eliminación de datos</h3></center>
-        <p>Utilice este formulario para solicitar la eliminación de su cuenta y de sus datos asociados de nuestra aplicación.</p>
-        <form action="mailto:developers.kheapp@gmail.com?subject=Solicitud%20de%20eliminación%20de%20cuenta%20y%20datos%20asociados" method="post" enctype="text/plain">
+
+    <div style="margin-top: 100px;" class="form-container">
+        <center>
+            <h3 style="color: #D5F600;">Solicitar eliminación de datos</h3><br>
+        </center>
+        <center>
+            <p>Por favor, complete el siguiente formulario para solicitar la eliminación de su cuenta y datos de nuestra
+                aplicación. Tenga en cuenta que esta acción es irreversible y resultará en la pérdida permanente de acceso a
+                su cuenta y cualquier información asociada.
+            </p>
+        </center>
+        <form id="deleteForm" action="mailto:developers.kheapp@gmail.com?subject=Solicitud%20de%20eliminación%20de%20cuenta%20y%20datos%20asociados"
+            method="post" enctype="text/plain">
             <label for="name">Nombre de usuario de Khé:</label><br>
-            <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required><br>
+            <input style="font-size: 0.8em;" type="text" id="username" name="username" placeholder="Ingrese su nombre de usuario de Khé" required><br>
             <label for="email">Correo electrónico utilizado durante el registro:</label><br>
-            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required><br>
+            <input style="font-size: 0.8em;" type="email" id="email" name="email" placeholder="Ingrese el correo electrónico asociado a su cuenta" required><br>
             <label for="reason">Motivo de la eliminación:</label><br>
-            <textarea id="reason" name="reason" rows="4" placeholder="Explique el motivo de la eliminación" required></textarea><br><br>
-            <input type="submit" value="Enviar solicitud">
+            <textarea style="font-size: 0.8em;" id="reason" name="reason" rows="4" placeholder="Explique el motivo de su solicitud eliminación"
+                required></textarea><br><br>
+            <input style="font-size: 0.8em;" type="submit" value="Enviar solicitud" onclick="return confirm('¿Estás seguro de realizar esta acción?')">
         </form>
     </div>
 </body>
-
 </html>
