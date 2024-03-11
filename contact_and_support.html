@@ -14,7 +14,6 @@
             height: 100vh;
             margin: 0;
             color: white;
-            /* Color del texto */
         }
 
         .form-container {
@@ -24,7 +23,6 @@
             border: 2px solid #D5F600;
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.5);
-            /* Fondo semitransparente */
         }
 
         form {
@@ -42,9 +40,7 @@
             border-radius: 5px;
             box-sizing: border-box;
             color: white;
-            /* Color del texto */
             background-color: transparent;
-            /* Fondo transparente */
         }
 
         input[type="submit"] {
@@ -61,7 +57,7 @@
             background-color: #B3CC57;
         }
     </style>
-    <title>Khé - Comparte tu día a día</title>
+    <title>Khé - Contacto y Soporte</title>
 </head>
 
 <body>
@@ -76,26 +72,25 @@
     </nav>
 
 
-    <div style="margin-top: 100px;" class="form-container">
+    <div style="margin-top: 150px;" class="form-container">
         <center>
-            <h3 style="color: #D5F600;">Solicitar eliminación de datos</h3><br>
+            <h3 style="color: #D5F600;">Contacto y Soporte</h3><br>
         </center>
         <center>
-            <p>Por favor, complete el siguiente formulario para solicitar la eliminación de su cuenta y datos de nuestra
-                aplicación. Tenga en cuenta que esta acción es irreversible y resultará en la pérdida permanente de acceso a
-                su cuenta y cualquier información asociada.
-            </p>
+            <p>Por favor, complete el siguiente formulario para contactarnos o solicitar soporte. Estaremos encantados de ayudarte con cualquier pregunta o problema que tengas.</p>
         </center>
-        <form id="deleteForm" action="mailto:developers.kheapp@gmail.com?subject=Solicitud%20de%20eliminación%20de%20cuenta%20y%20datos%20asociados"
+        <form id="contactForm" action="mailto:developers.kheapp@gmail.com?subject=Consulta%20o%20solicitud%20de%20soporte"
             method="post" enctype="text/plain">
-            <label for="name">Nombre de usuario de Khé:</label><br>
-            <input style="font-size: 0.8em;" type="text" id="username" name="username" placeholder="Ingrese su nombre de usuario de Khé" required><br>
-            <label for="email">Correo electrónico utilizado durante el registro:</label><br>
-            <input style="font-size: 0.8em;" type="email" id="email" name="email" placeholder="Ingrese el correo electrónico asociado a su cuenta" required><br>
-            <label for="reason">Motivo de la eliminación:</label><br>
-            <textarea style="font-size: 0.8em;" id="reason" name="reason" rows="4" placeholder="Explique el motivo de su solicitud eliminación"
+            <label for="name">Nombre:</label><br>
+            <input style="font-size: 0.8em;" type="text" id="name" name="name" placeholder="Ingrese su nombre" required><br>
+            <label for="email">Correo electrónico:</label><br>
+            <input style="font-size: 0.8em;" type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required><br>
+            <label for="subject">Asunto:</label><br>
+            <input style="font-size: 0.8em;" type="text" id="subject" name="subject" placeholder="Ingrese el asunto" required><br>
+            <label for="message">Mensaje:</label><br>
+            <textarea style="font-size: 0.8em;" id="message" name="message" rows="4" placeholder="Escriba su mensaje aquí"
                 required></textarea><br><br>
-            <input style="font-size: 0.8em;" type="submit" value="Enviar solicitud" onclick="return confirm('¿Estás seguro de realizar esta acción?')">
+            <input style="font-size: 0.8em;" type="submit" value="Enviar mensaje" onclick="return confirm('¿Estás seguro de enviar este mensaje?')">
         </form>
     </div>
 </body>
